@@ -3,14 +3,18 @@
 * Install
 
 ```
-  npm install --save-dev damenor_sass
+  npm install --save-dev @damenor/sass
+    or
+  npm i -D @damenor/sass
 ```
 
 * Import in file .scss
 
 ```scss
 
-  /********************************* VARIABLES CUSTOM *********************************/
+  /********************************* 
+    VARIABLES CUSTOM HERE
+  *********************************/
 
   @import 'YOUR_PATH/node_modules/damenor_sass/index';
 ```
