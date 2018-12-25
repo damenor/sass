@@ -1,0 +1,25 @@
+{
+  "name": "@damenor/sass",
+  "version": "1.0.01",
+  "description": "",
+  "main": "index.scss",
+  "scripts": {
+    "package": "npm publish --access=public",
+    "push": "git add * && git commit -m 'v1.0.01' && git push origin"
+  },
+  "keywords": [
+    "sass",
+    "css",
+    "framework"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damenor/sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damenor/sass/issues"
+  },
+  "homepage": "https://github.com/damenor/sass#readme",
+  "author": "damenor <damenor.develop@gmail.com> (https://github.com/damenor)",
+  "license": "MIT"
+}

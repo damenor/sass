@@ -1,0 +1,21 @@
+@mixin animated($animation){
+  @if $animated{
+    @extend .animated;
+    @extend .#{$animation};
+  }
+}
+
+@mixin transition($time: 0.4s){
+  transition: all $time ease-in-out;
+}
+
+
+@import './mediaQuery';
+@import './flexbox';
+@import './geometry';
+@import './position';
+@import './grid';
+@import './margin';
+@import './padding';
+@import './background';
+@import './text';

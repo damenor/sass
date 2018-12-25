@@ -1,0 +1,18 @@
+@mixin grid-column ($size, $isImportant: null){
+  width: calc(100% / #{$grid-columns} * #{$size}) isImportant($isImportant);
+}
+
+@if $generate-class or $generate-class-grid {
+  .row{ @include flex(row, null, null); }
+  
+  @for $i from 1 to $grid-columns + 1 {
+    .col-#{$i} { 
+      @include grid-column($i);
+    }
+    @each $breakpoint, $valueBreakpoint in $media-query-breakpoints {
+      .col-#{$breakpoint}-#{$i}{
+        @include mediaQuery($breakpoint){ @include grid-column($i, true); }
+      }
+    }
+  }
+}

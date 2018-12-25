@@ -1,0 +1,13 @@
+@import './colors';
+
+@function isImportant($isImportant){
+  $value: null;
+  @if $isImportant { 
+    $value: !important;
+  }
+  @return $value;
+}
+
+@function getMediaQueryBreakpoing($key){
+  @return map-get($media-query-breakpoints, $key);
+}

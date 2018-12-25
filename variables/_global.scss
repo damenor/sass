@@ -1,0 +1,29 @@
+$reset: true !default;
+$animated: true !default;
+
+/********************************* GENERATE CLASS HELPERS *********************************/
+$generate-class: false !default;
+$generate-class-grid: false !default;
+$generate-class-flexbox: false !default;
+$generate-class-padding: false !default;
+$generate-class-margin: false !default;
+$generate-class-geometry: false !default;
+$generate-class-bg-color: false !default;
+$generate-class-text-color: false !default;
+
+/********************************* MEDIA QUERY *********************************/
+$breakpoint-xxs: 320 !default;
+$breakpoint-xs: 544 !default;
+$breakpoint-sm: 768 !default;
+$breakpoint-md: 992 !default;
+$breakpoint-lg: 1200 !default;
+$media-query-breakpoints: (
+  xxs: $breakpoint-xxs,
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg
+);
+
+/********************************* GRID *********************************/
+$grid-columns: 12 !default;

@@ -1,0 +1,9 @@
+@if $generate-class or $generate-class-bg-color{
+  .bg-primary { background-color: colorTheme(primary) isImportant(true); }
+  .bg-primary-light { background-color: colorTheme(primaryLight) isImportant(true); }
+  .bg-secondary { background-color: colorTheme(secondary) isImportant(true); }
+  .bg-danger { background-color: colorTheme(danger) isImportant(true); }
+  .bg-warning { background-color: colorTheme(warning) isImportant(true); }
+  .bg-success { background-color: colorTheme(success) isImportant(true); }
+  .bg-info { background-color: colorTheme(info) isImportant(true); }
+}

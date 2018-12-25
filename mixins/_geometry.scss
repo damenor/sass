@@ -1,0 +1,26 @@
+@mixin square($size, $type: 'px'){
+  width: #{$size + $type};
+  height: #{$size + $type};
+}
+
+@mixin rectangle($sizeW, $sizeH, $type: 'px'){
+  width: #{$sizeW + $type};
+  height: #{$sizeH + $type};
+}
+
+@mixin circle($size, $type: 'px'){
+  @include square($size, $type);
+  border-radius: 50%;
+}
+
+@if $generate-class or $generate-class-geometry {
+  @for $i from 1 to 5 {
+    .square-#{$i}{ @include square($i, 'rem'); }
+    $rectangleH: #{$i * 2};
+    .rectangle-#{$i}{ @include rectangle($i, $rectangleH, 'rem'); }
+    .circle-#{$i}{ @include circle($i, 'rem'); }
+  }
+  .circle{
+    @include circle(100, '%');
+  }
+}

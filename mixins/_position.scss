@@ -1,0 +1,17 @@
+@mixin position($top: null, $right: null, $bottom: null, $left: null){
+  @if($top){ top: #{$top + 'px'}; }
+  @if($right){ right: #{$right + 'px'}; }
+  @if($bottom){ bottom: #{$bottom + 'px'}; }
+  @if($left){ left: #{$left + 'px'}; }
+}
+
+
+@mixin positionAbsolute($top: null, $right: null, $bottom: null, $left: null){
+  position: absolute;
+  @include position($top, $right, $bottom, $left)
+}
+
+@mixin positionFixed($top: null, $right: null, $bottom: null, $left: null){
+  position: fixed;
+  @include position($top, $right, $bottom, $left)
+}

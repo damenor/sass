@@ -1,0 +1,29 @@
+/********************************* COLORS *********************************/
+$color-theme-primary: #CF649A !default;
+$color-theme-primary-light: lighten(#CF649A, 5) !default;
+$color-theme-secondary: #37474f !default;
+$color-theme-light: #ecf0f1 !default;
+$color-theme-danger: #e74c3c !default;
+$color-theme-info: #2980b9 !default;
+$color-theme-success: #2ecc71 !default;
+$color-theme-warning: #f39c12 !default;
+
+$colors-theme: (
+  primary: $color-theme-primary,
+  primaryLight: $color-theme-primary-light,
+  secondary: $color-theme-secondary,
+  light: $color-theme-light,
+  danger: $color-theme-danger,
+  warning: $color-theme-warning,
+  info: $color-theme-info,
+  success: $color-theme-success
+);
+
+/********************************* NAVBAR *********************************/
+$navbar-height: 48px !default;
+
+/********************************* FOOTER *********************************/
+$footer-height: 30px !default;
+
+/********************************* CONTAINER *********************************/
+$container-height: calc(100vh - #{$navbar-height} - #{$footer-height}) !default;
