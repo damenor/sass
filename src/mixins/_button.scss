@@ -1,0 +1,40 @@
+@mixin buttonMenu (){
+  position: relative;
+  width: 30px;
+  height: 3px;
+  margin: 10px 0;
+  background-color: colorTheme(light);
+  cursor: pointer;
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    margin-top: -7px;
+    background-color: colorTheme(light);
+  }
+  &:after{
+    margin-top: 7px;
+  }
+}
+
+@mixin buttonMenu1 (){
+  @include buttonMenu();
+  &:before, &:after{
+    width: 50%;
+  }
+}
+
+@mixin buttonMenu2 (){
+  @include buttonMenu1;
+  &:after{
+    right: 0;
+  }
+}
+
+@mixin buttonMenu2 (){
+  @include buttonMenu1;
+  &:before, &:after{
+    left: 25%;
+  }
+}
