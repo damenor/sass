@@ -1,4 +1,4 @@
-@mixin sidemenu1{
+@mixin sidemenu{
   z-index: 99;
   position: fixed;
   top: 0;
@@ -6,21 +6,13 @@
   &-container{
     z-index: 99;
     position: fixed;
-    width: 500px;
+    width: 80%;
+    max-width: 300px;
     height: 100%;
     top: 0;
     left: 0;
-    padding: 24px;
-    background: colorTheme(secondary);
-    box-shadow: 5px 0 4px rgba(0,0,0,0.12), 5px 0 2px rgba(0,0,0,0.24);
-    h1{
-      margin-left: 32px;
-      margin-bottom: 96px;
-      color: colorTheme(primaryLight);
-      font-family: 'Gloria Hallelujah', cursive;
-      font-size: 2rem;
-      text-align: center;
-    }
+    padding: 1rem;
+    box-shadow: 5px 0 4px rgba(0,0,0,0.12), 5px 0 2px rgba(0,0,0,0.16);
     &-items{
       @include flex(column, flex-end, center);
     }
@@ -35,19 +27,7 @@
     background-color: rgba(0,0,0,0.12);
     cursor: pointer;
   }
-  &-item {
-    opacity: 0;
-    a{
-      @include flex(row, flex-end, center);
-      width: 80%;
-      height: 30px;
-      margin-bottom: 1rem;
-      color: white;
-      font-weight: 300;
-      font-size: 1.5rem;
-      text-align: center;
-      border-radius: 5px;
-      transform: skew(16deg);
-    }
+  &-link {
+    width: 100%;
   }
 }

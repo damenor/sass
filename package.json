@@ -1,11 +1,16 @@
 {
   "name": "@damenor/sass",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Utils for SASS and CSS",
   "main": "index.scss",
   "scripts": {
+    "build": "npm run build-all && npm run build-class && npm run build-all-min && npm run build-class-min", 
+    "build-all": "node-sass all.scss dist/all.css",
+    "build-class": "node-sass generateClass.scss dist/styles.css",
+    "build-all-min": "node-sass all.scss dist/all.min.css --output-style compressed",
+    "build-class-min": "node-sass generateClass.scss dist/styles.min.css --output-style compressed",
     "package": "npm publish --access=public && npm run push",
-    "push": "git add * && git commit -m 'v1.0.13' && git push origin"
+    "push": "git add * && git commit -m 'v1.0.14' && git push origin"
   },
   "keywords": [
     "sass",
