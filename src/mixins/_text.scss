@@ -1,16 +1,5 @@
-@mixin text-truncate() {
+@mixin textTruncate() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-@if $generate-class or $generate-class-text-color {
-  .text-primary { color: colorTheme(primary) isImportant(true); }
-  .text-primary-light { color: colorTheme(primaryLight) isImportant(true); }
-  .text-secondary { color: colorTheme(secondary) isImportant(true); }
-  .text-danger { color: colorTheme(danger) isImportant(true); }
-  .text-warning { color: colorTheme(warning) isImportant(true); }
-  .text-success { color: colorTheme(success) isImportant(true); }
-  .text-info { color: colorTheme(info) isImportant(true); }
-  .text-truncate { @include text-truncate(); }
 }

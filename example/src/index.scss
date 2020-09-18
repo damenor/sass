@@ -1,4 +1,6 @@
-@import '../../all.scss';
+// @import '../../all.scss';
+@import '../node_modules/@damenor/sass/index.scss';
+@import '../node_modules/@damenor/sass/dist/styles.min.css';
 
 body {
   background-color: colorTheme(light);

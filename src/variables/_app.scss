@@ -26,10 +26,10 @@ $colors-theme: (
 );
 
 /********************************* NAVBAR *********************************/
-$navbar-height: 48px !default;
+$navbar-height: 3rem !default;
 
 /********************************* FOOTER *********************************/
-$footer-height: 30px !default;
+$footer-height: 2rem !default;
 
 /********************************* CONTAINER *********************************/
 $container-height: calc(100vh - #{$navbar-height} - #{$footer-height}) !default;

@@ -4,7 +4,9 @@
 
 ```
   npm install --save-dev @damenor/sass
-    or
+    
+  or
+
   npm i -D @damenor/sass
 ```
 
@@ -12,16 +14,30 @@
 
 ```scss
 
-  /********************************* 
-    VARIABLES CUSTOM HERE
-  *********************************/
+  /***** SET VARIABLES HERE *****/
 
-  @import 'YOUR_PATH/node_modules/damenor_sass/index';
+  @import '<YOUR_PROJECT_PATH>/node_modules/@damenor/sass/index.scss'; // For SASS utils
+
+  @import '<YOUR_PROJECT_PATH>/node_modules/@damenor/sass/dist/styles.min.css'; // For CSS class
+
 ```
 
 ## DOCS 
 
 ### Default Variables
+
+#### Global
+```scss
+  $reset: true;
+  $animated: true;
+  $grid-columns: 12 !default;
+
+  $navbar-height: 3rem;
+
+  $footer-height: 2rem;
+
+  $container-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+```
 
 #### Colors
 ```scss
@@ -35,17 +51,30 @@
   $color-theme-warning: #f39c12;
 ```
 
-#### Container
+#### Generate class
 ```scss
-  $container-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+  $generate-class: false;
+  $generate-class-grid: false;
+  $generate-class-flexbox: false;
+  $generate-class-padding: false;
+  $generate-class-margin: false;
+  $generate-class-geometry: false;
+  $generate-class-bg-color: false;
+  $generate-class-text-color: false;
 ```
 
-#### Footer
+#### Breakpoints
 ```scss
-  $footer-height: 30px;
-```
-
-#### Navbar
-```scss
-  $navbar-height: 48px;
+  $breakpoint-xxs: 320;
+  $breakpoint-xs: 544;
+  $breakpoint-sm: 768;
+  $breakpoint-md: 992;
+  $breakpoint-lg: 1200;
+  $media-query-breakpoints: (
+    xxs: $breakpoint-xxs,
+    xs: $breakpoint-xs,
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg
+  );
 ```

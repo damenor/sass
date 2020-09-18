@@ -1,0 +1,52 @@
+@if $generate-class or $generate-class-flexbox{
+
+  $justify-content: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around
+  );
+    
+  $align-items: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch
+  );
+
+  .flex{ @include flex; }
+  .flex-column { @include flex(column); }
+  .flex-nowrap { @include flexWrap(false); }
+  @each $position, $cssValue in $justify-content {
+    .flex.flex-x-#{$position}{ @include flexJustifyContent($cssValue); }
+    .flex-column.flex-y-#{$position}{ @include flexJustifyContent($cssValue); }
+  }
+  @each $position, $cssValue in $align-items {
+    .flex.flex-y-#{$position}{ @include flexAlignItems($cssValue); }
+    .flex-column.flex-x-#{$position}{ @include flexAlignItems($cssValue); }
+  }
+
+  @each $breakpoint, $valueBreakpoint in $media-query-breakpoints {
+    .flex-#{$breakpoint}{  
+      @include mediaQuery($breakpoint){
+        @include flex;
+      }
+    }
+    .flex-#{$breakpoint}-column{  
+      @include mediaQuery($breakpoint){
+        @include flex(column);
+      }
+    }
+    @each $position, $cssValue in $justify-content {
+      .flex-#{$breakpoint}.flex-x-#{$position}{ @include flexJustifyContent($cssValue); }
+      .flex-#{$breakpoint}-column.flex-y-#{$position}{ @include flexJustifyContent($cssValue); }
+    }
+    @each $position, $cssValue in $align-items {
+      .flex-#{$breakpoint}.flex-y-#{$position}{ @include flexAlignItems($cssValue); }
+      .flex-#{$breakpoint}-column.flex-x-#{$position}{ @include flexAlignItems($cssValue); }
+    }
+  }
+
+}

@@ -1,7 +1,11 @@
 @if $generate-class or $generate-class-bg-color{
   .bg-primary { background-color: colorTheme(primary) isImportant(true); }
-  .bg-primary-light { background-color: colorTheme(primaryLight) isImportant(true); }
+  .bg-primary-light { background-color: colorTheme(primary-light) isImportant(true); }
   .bg-secondary { background-color: colorTheme(secondary) isImportant(true); }
+  .bg-dark { background-color: colorTheme(dark) isImportant(true); }
+  .bg-light { background-color: colorTheme(light) isImportant(true); }
+  .bg-grey { background-color: colorTheme(grey) isImportant(true); }
+  .bg-grey-dark { background-color: colorTheme(grey-dark) isImportant(true); }
   .bg-danger { background-color: colorTheme(danger) isImportant(true); }
   .bg-warning { background-color: colorTheme(warning) isImportant(true); }
   .bg-success { background-color: colorTheme(success) isImportant(true); }
