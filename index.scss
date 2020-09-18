@@ -8,3 +8,5 @@
 @import './src/helpers/reset';
 
 @import './src/vendors/index';
+
+@include fontFamilyImports($fonts);

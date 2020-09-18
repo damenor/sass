@@ -32,6 +32,8 @@
   $animated: true;
   $grid-columns: 12 !default;
 
+  $fonts: () !default; // Values: (Kufan, Roboto, Ranchers)
+
   $navbar-height: 3rem;
 
   $footer-height: 2rem;

@@ -1,9 +1,12 @@
 @if $generate-class or $generate-class-padding {
-  @for $i from 0 to 5 {
-    .p-#{$i} { padding: #{$i * 0.5}rem isImportant(true); }
-    .pt-#{$i} { padding: #{$i * 0.5}rem isImportant(true); }
-    .pb-#{$i} { padding-bottom: #{$i * 0.5}rem isImportant(true); }
-    .pl-#{$i} { padding-left: #{$i * 0.5}rem isImportant(true); }
-    .pr-#{$i} { padding-right: #{$i * 0.5}rem isImportant(true); }
+  $class-padding-size: 0.5;
+  $class-padding-numbers: 5;
+  $class-padding-type: rem;
+  @for $i from 0 to $class-padding-numbers {
+    .p-#{$i} { padding: #{$i * $class-padding-size}#{$class-padding-type} isImportant(true); }
+    .pt-#{$i} { padding-top: #{$i * $class-padding-size}#{$class-padding-type} isImportant(true); }
+    .pb-#{$i} { padding-bottom: #{$i * $class-padding-size}#{$class-padding-type} isImportant(true); }
+    .pl-#{$i} { padding-left: #{$i * $class-padding-size}#{$class-padding-type} isImportant(true); }
+    .pr-#{$i} { padding-right: #{$i * $class-padding-size}#{$class-padding-type} isImportant(true); }
   }
 }
