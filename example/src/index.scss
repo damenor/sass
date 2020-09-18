@@ -1,0 +1,25 @@
+@import '../../all.scss';
+
+body {
+  background-color: colorTheme(light);
+}
+
+.app {
+
+  &-title,
+  &-subtitle {
+    text-align: center;
+  }
+
+  &-title {
+    color: colorTheme(primary);
+    font-size: 4rem;
+  }
+  
+  &-subtitle {
+    color: colorTheme(grey-dark);
+    font-size: 0.8rem;
+  }
+
+}
+

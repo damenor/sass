@@ -1,14 +1,14 @@
-@mixin square($size, $type: 'px'){
+@mixin square($size, $type: 'rem'){
   width: #{$size + $type};
   height: #{$size + $type};
 }
 
-@mixin rectangle($sizeW, $sizeH, $type: 'px'){
+@mixin rectangle($sizeW, $sizeH, $type: 'rem'){
   width: #{$sizeW + $type};
   height: #{$sizeH + $type};
 }
 
-@mixin circle($size, $type: 'px'){
+@mixin circle($size, $type: 'rem'){
   @include square($size, $type);
   border-radius: 50%;
 }

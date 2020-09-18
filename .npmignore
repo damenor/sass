@@ -3,5 +3,8 @@
 #git
 .gitignore
 
+#web-example 
+example/
+
 #dev tools
 generateClass.scss

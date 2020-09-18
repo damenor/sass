@@ -2,6 +2,9 @@
 $color-theme-primary: #CF649A !default;
 $color-theme-primary-light: lighten(#CF649A, 5) !default;
 $color-theme-secondary: #37474f !default;
+$color-theme-dark: #2d2d2d !default;
+$color-theme-grey: #ccc !default;
+$color-theme-grey-dark: #666 !default;
 $color-theme-light: #ecf0f1 !default;
 $color-theme-danger: #e74c3c !default;
 $color-theme-info: #2980b9 !default;
@@ -10,8 +13,11 @@ $color-theme-warning: #f39c12 !default;
 
 $colors-theme: (
   primary: $color-theme-primary,
-  primaryLight: $color-theme-primary-light,
+  primary-light: $color-theme-primary-light,
   secondary: $color-theme-secondary,
+  dark: $color-theme-dark,
+  grey: $color-theme-grey,
+  grey-dark: $color-theme-grey-dark,
   light: $color-theme-light,
   danger: $color-theme-danger,
   warning: $color-theme-warning,

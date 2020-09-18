@@ -1,0 +1,10 @@
+@mixin animated($animation){
+  @if $animated{
+    @extend .animated;
+    @extend .#{$animation};
+  }
+}
+
+@mixin transition($time: 0.4s){
+  transition: all $time ease-in-out;
+}
