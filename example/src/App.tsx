@@ -4,10 +4,10 @@ function App() {
   return (
     <>
 
-      <div>
-        <h1 className="app-title">@damenor/sass</h1>
-        <p className="text-grey-dark pt-4">Utils for SASS and CSS</p>
-      </div>
+      <nav className="navbar">
+        <h1 className="navbar-title">@damenor/sass</h1>
+        <h1 className="navbar-title">@damenor/sass</h1>
+      </nav>
 
     </>
   );

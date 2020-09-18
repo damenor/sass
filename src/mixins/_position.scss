@@ -1,5 +1,4 @@
 @mixin position($top: null, $right: null, $bottom: null, $left: null){
-  position: $position;
   @if($top){ top: #{$top + 'rem'}; }
   @if($right){ right: #{$right + 'rem'}; }
   @if($bottom){ bottom: #{$bottom + 'rem'}; }

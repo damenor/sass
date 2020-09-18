@@ -3,21 +3,27 @@ $fonts: (
   Roboto
 );
 
-@import '../../index.scss';
-// @import '../node_modules/@damenor/sass/index.scss';
-// @import '../node_modules/@damenor/sass/dist/styles.min.css';
+// @import '../../index.scss';
+
+@import '../node_modules/@damenor/sass/index.scss';
+@import '../node_modules/@damenor/sass/dist/styles.min.css';
 
 body {
   @include fontFamily(Roboto);
   background-color: colorTheme(light);
 }
 
-.app {
-  
+.navbar {
+
+  @include positionFixed($top: 0, $left: 0);
+
+  @include flex($y: center, $x: space-between);
+  height: $navbar-height;
+  border-bottom: 1px solid colorTheme(grey);
   &-title {
     @include fontFamily(Ranchers);
     color: colorTheme(primary);
-    font-size: 4rem;
+    font-size: 1.25rem;
   }
   
 }
