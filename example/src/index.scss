@@ -1,27 +1,47 @@
-// @import '../../all.scss';
+
+@mixin fontFamilyImports ($fonts: ()){
+  @each $family in $fonts {
+    @if $family == Kufan {
+      @import url('https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&display=swap');
+    }
+    @if $family == Ranchers {
+      @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+    }
+    @if $family == Roboto {
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    }
+  }
+}
+
+@mixin fontFamily($family: null) {
+  @if $family == Kufan { font-family: 'Kufan', cursive; }
+  @if $family == Ranchers { font-family: 'Ranchers', cursive; }
+  @if $family == Roboto { font-family: 'Roboto', sans-serif; }
+}
+
+$fonts: (
+  Kufan,
+  Ranchers,
+  Roboto,
+);
+
 @import '../node_modules/@damenor/sass/index.scss';
 @import '../node_modules/@damenor/sass/dist/styles.min.css';
 
+@include fontFamilyImports($fonts);
+
 body {
+  @include fontFamily(Roboto);
   background-color: colorTheme(light);
 }
 
 .app {
-
-  &-title,
-  &-subtitle {
-    text-align: center;
-  }
-
+  
   &-title {
+    @include fontFamily(Ranchers);
     color: colorTheme(primary);
     font-size: 4rem;
   }
   
-  &-subtitle {
-    color: colorTheme(grey-dark);
-    font-size: 0.8rem;
-  }
-
 }
 

@@ -6,7 +6,7 @@ function App() {
 
       <div>
         <h1 className="app-title">@damenor/sass</h1>
-        <p className="bg-primary">Utils for SASS and CSS</p>
+        <p className="text-grey-dark mt-3">Utils for SASS and CSS</p>
       </div>
 
     </>
