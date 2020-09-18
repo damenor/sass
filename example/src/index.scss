@@ -13,13 +13,21 @@ body {
   background-color: colorTheme(light);
 }
 
+.pl-1 {
+  margin-left: 10rem;
+}
+
 .navbar {
 
   @include positionFixed($top: 0, $left: 0);
-
   @include flex($y: center, $x: space-between);
+
+  width: 100%;
   height: $navbar-height;
   border-bottom: 1px solid colorTheme(grey);
+
+  @extend .pl-1;
+
   &-title {
     @include fontFamily(Ranchers);
     color: colorTheme(primary);

@@ -1,6 +1,6 @@
 @if $generate-class or $generate-class-text-color {
   .text-primary { color: colorTheme(primary) isImportant(true); }
-  .text-primary-light { color: colorTheme(primaryLight) isImportant(true); }
+  .text-primary-light { color: colorTheme(primary-light) isImportant(true); }
   .text-secondary { color: colorTheme(secondary) isImportant(true); }
   .text-dark { color: colorTheme(dark) isImportant(true); }
   .text-light { color: colorTheme(light) isImportant(true); }
